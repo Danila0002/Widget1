@@ -1,20 +1,31 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/widget_margin"
-    android:background="#09C">
-
+    android:padding="@dimen/widget_margin">
+    <ImageView
+        android:id="@+id/weather_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@android:drawable/stat_notify_error"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
     <TextView
-        android:id="@+id/appwidget_text"
+        android:textColor="#ffffff"
+        android:id="@+id/city_field"
+        android:text="@string/error"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/weather_icon"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/widget_text"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+    <TextView
         android:textColor="#ffffff"
-        android:textSize="24sp"
-        android:textStyle="bold|italic"
-        android:layout_margin="8dp"
-        android:background="#09C"/>
-
+        android:id="@+id/City_field"
+        android:text="@string/error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/details_field"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
 </RelativeLayout>
